@@ -302,6 +302,7 @@ $db = new Database();
                                             <th>Nafe</th>
                                             <th>Nafe</th>
                                             <th>Per Day Meals</th>
+                                            <th>Action</th>
 
                                         </tr>
                                     </thead>
@@ -332,6 +333,7 @@ $db = new Database();
                                             <td><?php echo $row['name14']; ?></td>
                                             <td><?php echo $row['name15']; ?></td>
                                             <td><?php echo $row['total']; ?></td>
+                                            <td><a href="update_meal.php?id=<?php echo $row['id']; ?>"><input type="button" class="btn btn-primary" name="edit" value="Edit"></input></a></td>
                                         </tr>
                                          <?php
                                         }
@@ -362,10 +364,12 @@ $db = new Database();
                                             <td><?php echo $row['t14']; ?></td>
                                             <td><?php echo $row['t15']; ?></td>
                                             <td><?php echo $total_meals; ?></td>
+                                            <td></td>
                                    <?php } ?>
                                         </tr>
                                         <tr class="odd gradeX">
                                             <td>Total Meambers Meal</td>
+                                            <td><?php echo $total_meals; ?></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -385,6 +389,7 @@ $db = new Database();
                                         </tr>
                                         <tr class="odd gradeX">
                                             <td>Meal Rate</td>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
