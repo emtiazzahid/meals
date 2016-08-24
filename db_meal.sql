@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2016 at 06:59 PM
+-- Generation Time: Aug 24, 2016 at 10:08 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -31,6 +31,33 @@ CREATE TABLE `tbl_accounts` (
   `name` int(11) NOT NULL,
   `password` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_markets`
+--
+
+CREATE TABLE `tbl_markets` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `cost` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_markets`
+--
+
+INSERT INTO `tbl_markets` (`id`, `name`, `date`, `cost`) VALUES
+(1, 'zahid', '600', '0'),
+(2, 'zahid', '24', '0'),
+(3, 'zahid', '20', '0'),
+(4, 'zahid', '18', '0'),
+(5, 'hlw', 'hhh', '2010'),
+(6, 'hlw', 'hhh', '0'),
+(7, 'zahid', '8/25/2016', '500'),
+(8, 'zahid', '8/25/2016', '600');
 
 -- --------------------------------------------------------
 
@@ -63,7 +90,7 @@ CREATE TABLE `tbl_meals` (
 --
 
 INSERT INTO `tbl_meals` (`id`, `date`, `name1`, `name2`, `name3`, `name4`, `name5`, `name6`, `name7`, `name8`, `name9`, `name10`, `name11`, `name12`, `name13`, `name14`, `name15`) VALUES
-(5, '2016-09-01', '20', 1, '145', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+(5, '2016-09-01', '20', 1, '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (6, '2016-09-02', '3', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (8, '2016-09-03', '0', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (9, '2016-09-04', '0', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
@@ -126,6 +153,12 @@ ALTER TABLE `tbl_accounts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_markets`
+--
+ALTER TABLE `tbl_markets`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_meals`
 --
 ALTER TABLE `tbl_meals`
@@ -146,6 +179,11 @@ ALTER TABLE `tbl_members`
 --
 ALTER TABLE `tbl_accounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_markets`
+--
+ALTER TABLE `tbl_markets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_meals`
 --

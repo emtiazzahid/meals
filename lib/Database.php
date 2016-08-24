@@ -56,7 +56,6 @@ class Database
 		$update_row = $this->link->query($query) or die ($this->link->error.__LINE__);
 		if ($update_row) {
 			return $update_row;
-			exit();
 		}
 		else
 		{
