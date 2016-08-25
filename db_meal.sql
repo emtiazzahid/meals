@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 24, 2016 at 10:08 PM
+-- Generation Time: Aug 25, 2016 at 08:39 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -57,7 +57,8 @@ INSERT INTO `tbl_markets` (`id`, `name`, `date`, `cost`) VALUES
 (5, 'hlw', 'hhh', '2010'),
 (6, 'hlw', 'hhh', '0'),
 (7, 'zahid', '8/25/2016', '500'),
-(8, 'zahid', '8/25/2016', '600');
+(8, 'zahid', '8/25/2016', '600'),
+(9, 'Eianur, Zahid', '8/25/2016', '600');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ CREATE TABLE `tbl_meals` (
 --
 
 INSERT INTO `tbl_meals` (`id`, `date`, `name1`, `name2`, `name3`, `name4`, `name5`, `name6`, `name7`, `name8`, `name9`, `name10`, `name11`, `name12`, `name13`, `name14`, `name15`) VALUES
-(5, '2016-09-01', '20', 1, '4', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+(5, '2016-09-01', '2.5', 2, '3', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (6, '2016-09-02', '3', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (8, '2016-09-03', '0', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
 (9, '2016-09-04', '0', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
@@ -131,16 +132,35 @@ CREATE TABLE `tbl_members` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `phone` varchar(20) NOT NULL,
-  `balance` varchar(10) NOT NULL,
-  `meals` int(11) NOT NULL
+  `balance` float NOT NULL,
+  `meals` int(11) NOT NULL,
+  `db_name` varchar(11) NOT NULL,
+  `deposite` float NOT NULL,
+  `deposite_date` varchar(20) NOT NULL,
+  `beal` int(11) NOT NULL,
+  `beal_status` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_members`
 --
 
-INSERT INTO `tbl_members` (`id`, `name`, `phone`, `balance`, `meals`) VALUES
-(1, 'zahid', '01686407947', '0', 0);
+INSERT INTO `tbl_members` (`id`, `name`, `phone`, `balance`, `meals`, `db_name`, `deposite`, `deposite_date`, `beal`, `beal_status`) VALUES
+(1, 'mamun', '01686407947', 0, 0, 'name1', 2000, '', 1538, 0),
+(2, 'zahid', '01686407947', 0, 0, 'name2', 1500, '', 362, 0),
+(3, 'mahfuz', '01686407947', 0, 0, 'name3', 2100, '', 543, 0),
+(4, 'faruq', '01686407947', 0, 0, 'name4', 2000, '', 362, 0),
+(5, 'ashraf', '01686407947', 0, 0, 'name5', 1500, '', 0, 0),
+(6, 'eianur', '01686407947', 0, 0, 'name6', 1700, '', 0, 0),
+(7, 'monjur', '01686407947', 0, 0, 'name7', 1800, '', 0, 0),
+(8, 'shahrukh', '01686407947', 0, 0, 'name8', 2000, '', 0, 0),
+(9, 'tutul', '01686407947', 0, 0, 'name9', 200, '', 0, 0),
+(10, 'nafee', '01686407947', 0, 0, 'name10', 700, '', 905, 0),
+(11, 'null', '01686407947', 0, 0, 'name11', 0, '', 0, 0),
+(12, 'null', '01686407947', 0, 0, 'name12', 0, '', 0, 0),
+(13, 'null', '01686407947', 0, 0, 'name13', 0, '', 0, 0),
+(14, 'null', '01686407947', 0, 0, 'name14', 0, '', 0, 0),
+(15, 'null', '01686407947', 0, 0, 'name15', 0, '', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -183,7 +203,7 @@ ALTER TABLE `tbl_accounts`
 -- AUTO_INCREMENT for table `tbl_markets`
 --
 ALTER TABLE `tbl_markets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_meals`
 --
@@ -193,7 +213,7 @@ ALTER TABLE `tbl_meals`
 -- AUTO_INCREMENT for table `tbl_members`
 --
 ALTER TABLE `tbl_members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
